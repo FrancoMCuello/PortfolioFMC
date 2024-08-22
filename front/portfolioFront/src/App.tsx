@@ -1,7 +1,8 @@
-import Home from "./components/home";
+import Home from "./components/Home";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Contact from "./components/contact";
+import Contact from "./components/Contacto";
+import Formacion from "./components/Formacion";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/formacion" element={<Formacion />} />
         </Routes>
       </BrowserRouter>
     </div>
