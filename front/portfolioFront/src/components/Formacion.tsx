@@ -8,6 +8,10 @@ function Formacion() {
     navigate("/");
   };
 
+  const navSkills = () => {
+    navigate("/skills");
+  };
+
   return (
     <>
       <h1 style={{ textAlign: "center", color: "white" }}>Formacion dev</h1>
@@ -42,7 +46,7 @@ function Formacion() {
             </h3>
           </div>
         </StyledContainerF>
-        <button>Seguir</button>
+        <button onClick={navSkills}>Seguir</button>
       </StyledContainerG>
     </>
   );
