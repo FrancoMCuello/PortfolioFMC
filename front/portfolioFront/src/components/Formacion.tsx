@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
+import BtnArrow from "./BtnArrow";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIosNewOutlined";
 
 function Formacion() {
   const navigate = useNavigate();
@@ -16,7 +18,7 @@ function Formacion() {
     <>
       <h1 style={{ textAlign: "center", color: "white" }}>Formacion dev</h1>
       <StyledContainerG>
-        <button onClick={navHome}>Regresar</button>
+        <BtnArrow onClick={navHome} />
         <StyledContainerF>
           <div className="containerF">
             <img
@@ -46,7 +48,14 @@ function Formacion() {
             </h3>
           </div>
         </StyledContainerF>
-        <button onClick={navSkills}>Seguir</button>
+        <BtnArrow
+          onClick={navSkills}
+          icon={
+            <ArrowBackIosIcon
+              sx={{ fontSize: 60, transform: "rotate(180deg)" }}
+            />
+          }
+        />
       </StyledContainerG>
     </>
   );

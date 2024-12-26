@@ -5,6 +5,8 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { useNavigate } from "react-router-dom";
+import BtnArrow from "./BtnArrow";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIosNewOutlined";
 
 function Home() {
   const navigate = useNavigate();
@@ -42,7 +44,17 @@ function Home() {
           </h2>
         </StyledTitulo>
         <StyledBotonTraslado>
-          <button onClick={navFormacion}>Flecha</button>
+          <BtnArrow
+            onClick={navFormacion}
+            icon={
+              <ArrowBackIosIcon
+                sx={{
+                  fontSize: 60,
+                  transform: "rotate(180deg)",
+                }}
+              />
+            }
+          />
         </StyledBotonTraslado>
       </StyledContainerP>
     </>
