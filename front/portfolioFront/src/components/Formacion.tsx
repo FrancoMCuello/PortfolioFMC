@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import BtnArrow from "./BtnArrow";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIosNewOutlined";
+import Nav from "./Nav";
 
 function Formacion() {
   const navigate = useNavigate();
@@ -16,9 +17,15 @@ function Formacion() {
 
   return (
     <>
-      <h1 style={{ textAlign: "center", color: "white" }}>Formacion dev</h1>
+      <StyledUp>
+        <h1>Formacion dev</h1>
+      </StyledUp>
+      <Nav />
+
       <StyledContainerG>
-        <BtnArrow onClick={navHome} />
+        <StyledBotonN>
+          <BtnArrow onClick={navHome} />
+        </StyledBotonN>
         <StyledContainerF>
           <div className="containerF">
             <img
@@ -48,34 +55,41 @@ function Formacion() {
             </h3>
           </div>
         </StyledContainerF>
-        <BtnArrow
-          onClick={navSkills}
-          icon={
-            <ArrowBackIosIcon
-              sx={{ fontSize: 60, transform: "rotate(180deg)" }}
-            />
-          }
-        />
+        <StyledBotonB>
+          <BtnArrow
+            onClick={navSkills}
+            icon={
+              <ArrowBackIosIcon
+                sx={{ fontSize: 60, transform: "rotate(180deg)" }}
+              />
+            }
+          />
+        </StyledBotonB>
       </StyledContainerG>
     </>
   );
 }
 
+const StyledUp = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: white;
+  position: relative;
+  z-index: 1;
+`;
+
 const StyledContainerG = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
-  h1 {
-    color: white;
-  }
 `;
 
 const StyledContainerF = styled.div`
   display: flex;
   flex-direction: row;
   width: 80%;
-  height: 15em;
+  min-height: 80vh;
   justify-content: center;
   align-items: flex-start;
   gap: 1em;
@@ -124,6 +138,19 @@ const StyledContainerF = styled.div`
       opacity: 1;
     }
   }
+`;
+
+const StyledBotonB = styled.div`
+  display: flex;
+  width: 10%;
+  align-items: center;
+  justify-content: end;
+`;
+
+const StyledBotonN = styled.div`
+  display: flex;
+  width: 10%;
+  align-items: center;
 `;
 
 export default Formacion;

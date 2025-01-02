@@ -37,10 +37,11 @@ const StyledButton = styled.button`
   background: transparent;
   border: none;
   cursor: pointer;
-  display: inline-block;
+  display: flex;
   align-items: center;
   justify-content: center;
   color: #eeeeee;
+  padding: 0;
 
   &:hover {
     background-color: #9b9393;
