@@ -4,6 +4,7 @@ import MuiSlider from "@mui/material/Slider";
 import { useNavigate } from "react-router-dom";
 import BtnArrow from "./BtnArrow";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIosNewOutlined";
+import Nav from "./Nav";
 
 function Skills() {
   const navigate = useNavigate();
@@ -16,7 +17,20 @@ function Skills() {
 
   return (
     <>
-      <h1 style={{ textAlign: "center", color: "white" }}>Skills</h1>
+      <StyledUp>
+        <h1
+          style={{
+            position: "relative",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            height: "100%",
+          }}
+        >
+          Skills
+        </h1>
+        <Nav />
+      </StyledUp>
       <StyledContainerG>
         <BtnArrow onClick={navForm} />
         <StyledContainerSkills>
@@ -61,6 +75,17 @@ function Skills() {
     </>
   );
 }
+
+const StyledUp = styled.div`
+  display: flex;
+  flex-direction: row;
+  color: white;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  justify-content: space-between;
+  height: 4em;
+`;
 
 const StyledContainerG = styled.div`
   display: flex;

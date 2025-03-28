@@ -18,9 +18,19 @@ function Formacion() {
   return (
     <>
       <StyledUp>
-        <h1>Formacion dev</h1>
+        <h1
+          style={{
+            position: "relative",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            height: "100%",
+          }}
+        >
+          Formacion dev
+        </h1>
+        <Nav />
       </StyledUp>
-      <Nav />
 
       <StyledContainerG>
         <StyledBotonN>
@@ -29,7 +39,8 @@ function Formacion() {
         <StyledContainerF>
           <div className="containerF">
             <img
-              src="https://filmnoir.pythonanywhere.com/static/img/logo-CAC-2.webp"
+              className="logoCaC"
+              src="https://elyrod85.github.io/Codo-a-Codo-Proyectos/imgs/logoCACsinbloque.png"
               alt=""
             />
             <h3 className="activateF">
@@ -73,10 +84,12 @@ function Formacion() {
 const StyledUp = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
   color: white;
   position: relative;
   z-index: 1;
+  width: 100%;
+  justify-content: space-between;
+  height: 4em;
 `;
 
 const StyledContainerG = styled.div`
@@ -104,14 +117,23 @@ const StyledContainerF = styled.div`
     transition: height 0.3s ease;
     margin-bottom: 0;
     background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &:hover {
       height: 20em;
     }
+    .logoCaC {
+      width: 50%;
+      height: auto;
+      object-fit: contain;
+    }
 
     img {
-      width: 20em;
-      height: 10em;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
       transition: transform 0.3s ease;
 
       &:hover {

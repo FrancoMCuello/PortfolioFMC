@@ -20,7 +20,9 @@ function Home() {
 
   return (
     <>
-      <Nav />
+      <StyledUp>
+        <Nav />
+      </StyledUp>
       <StyledContainerP>
         <StyledBotonesRedes className="botonesRedes">
           <IconButton className="botonGit" onClick={navGit} aria-label="GitHub">
@@ -60,6 +62,15 @@ function Home() {
     </>
   );
 }
+
+const StyledUp = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  color: white;
+  z-index: 1;
+  width: 100%;
+  height: 4em;
+`;
 
 const StyledContainerP = styled.div`
   display: flex;
