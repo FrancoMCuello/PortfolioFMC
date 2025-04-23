@@ -31,8 +31,12 @@ function Skills() {
         </h1>
         <Nav />
       </StyledUp>
+
       <StyledContainerG>
-        <BtnArrow onClick={navForm} />
+        <StyledBotonN>
+          <BtnArrow onClick={navForm} />
+        </StyledBotonN>
+
         <StyledContainerSkills>
           <div className="skillsH">
             <h3>Skills Hard</h3>
@@ -63,14 +67,17 @@ function Skills() {
             <h4>Logo Skill</h4>
           </div>
         </StyledContainerSkills>
-        <BtnArrow
-          onClick={navContact}
-          icon={
-            <ArrowBackIosIcon
-              sx={{ fontSize: 60, transform: "rotate(180deg)" }}
-            />
-          }
-        />
+
+        <StyledBotonB>
+          <BtnArrow
+            onClick={navContact}
+            icon={
+              <ArrowBackIosIcon
+                sx={{ fontSize: 60, transform: "rotate(180deg)" }}
+              />
+            }
+          />
+        </StyledBotonB>
       </StyledContainerG>
     </>
   );
@@ -89,11 +96,9 @@ const StyledUp = styled.div`
 
 const StyledContainerG = styled.div`
   display: flex;
-  min-height: 80vh;
-  color: white;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
+  width: 100%;
 `;
 
 const StyledContainerSkills = styled.div`
@@ -113,6 +118,19 @@ const StyledContainerSkills = styled.div`
     align-items: center;
     flex-direction: column;
   }
+`;
+
+const StyledBotonN = styled.div`
+  display: flex;
+  width: 10%;
+  align-items: center;
+`;
+
+const StyledBotonB = styled.div`
+  display: flex;
+  width: 10%;
+  align-items: center;
+  justify-content: end;
 `;
 
 const StyledSlider = styled(MuiSlider)`

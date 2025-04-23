@@ -36,6 +36,7 @@ function Formacion() {
         <StyledBotonN>
           <BtnArrow onClick={navHome} />
         </StyledBotonN>
+
         <StyledContainerF>
           <div className="containerF">
             <img
@@ -66,6 +67,7 @@ function Formacion() {
             </h3>
           </div>
         </StyledContainerF>
+
         <StyledBotonB>
           <BtnArrow
             onClick={navSkills}
@@ -96,6 +98,8 @@ const StyledContainerG = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  min-height: 80vh;
 `;
 
 const StyledContainerF = styled.div`

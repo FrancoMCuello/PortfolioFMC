@@ -23,7 +23,7 @@ function Home() {
       <StyledUp>
         <Nav />
       </StyledUp>
-      <StyledContainerP>
+      <StyledContainerG>
         <StyledBotonesRedes className="botonesRedes">
           <IconButton className="botonGit" onClick={navGit} aria-label="GitHub">
             <GitHubIcon />
@@ -58,7 +58,7 @@ function Home() {
             }
           />
         </StyledBotonTraslado>
-      </StyledContainerP>
+      </StyledContainerG>
     </>
   );
 }
@@ -72,7 +72,7 @@ const StyledUp = styled.div`
   height: 4em;
 `;
 
-const StyledContainerP = styled.div`
+const StyledContainerG = styled.div`
   display: flex;
   min-height: 80vh;
   justify-content: center;
