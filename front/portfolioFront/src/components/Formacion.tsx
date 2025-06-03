@@ -39,9 +39,13 @@ function Formacion() {
 
         <StyledContainerF>
           <div className="containerF">
-            <img className="logoCaC" src="" alt="Imagen de Proyecto" />
+            <img
+              src="https://i.ibb.co/SXNzYrZc/Imagen-de-Whats-App-2025-06-03-a-las-10-54-36-4a50ec30.jpg"
+              alt=""
+            />
             <h3 className="activateF">
-              Aca se agregaria la informacion extendida
+              Aca se agregaria la informacion extendida sobre el proyecto del
+              lavadero
             </h3>
           </div>
           <div className="containerF">
@@ -49,12 +53,6 @@ function Formacion() {
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSoHMf7EFEC2MgIyuwkt3vuyq30PcKvuqu3g&s"
               alt=""
             />
-            <h3 className="activateF">
-              Aca se agregaria la informacion extendida
-            </h3>
-          </div>
-          <div className="containerF">
-            <img src="imagen del proyecto" alt="" />
             <h3 className="activateF">
               Aca se agregaria la informacion extendida
             </h3>
@@ -108,8 +106,8 @@ const StyledContainerF = styled.div`
     position: relative;
     border: 1px solid white;
     margin: 0.5em;
-    width: 20em;
-    height: 10em;
+    width: 50%;
+    height: 15em;
     overflow: hidden;
     transition: height 0.3s ease;
     margin-bottom: 0;
@@ -119,12 +117,7 @@ const StyledContainerF = styled.div`
     align-items: center;
 
     &:hover {
-      height: 20em;
-    }
-    .logoCaC {
-      width: 50%;
-      height: auto;
-      object-fit: contain;
+      height: 100%;
     }
 
     img {
@@ -141,16 +134,20 @@ const StyledContainerF = styled.div`
     .activateF {
       opacity: 0;
       position: absolute;
-      up: 0;
       left: 0;
       right: 0;
       padding: 0.5em;
       margin: 0;
-      background-color: black;
+      background-color: rgba(0, 0, 0, 0.6);
       color: white;
       text-align: center;
       transition: opacity 0.3s ease;
-      height: 10em;
+      height: 100%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
     }
 
     &:hover .activateF {

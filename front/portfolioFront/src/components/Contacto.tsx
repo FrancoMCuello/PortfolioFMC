@@ -8,9 +8,9 @@ import PageWrapper from "./PageWrapper";
 function Contact() {
   const navigate = useNavigate();
 
-  const navHome = () => {
+  /* const navHome = () => {
     navigate("/");
-  };
+  }; */
 
   const navSkills = () => {
     navigate("/skills");
