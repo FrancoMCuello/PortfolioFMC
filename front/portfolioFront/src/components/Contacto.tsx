@@ -98,9 +98,7 @@ function Contact() {
       </StyledContainerG>
       <StyledFooter>
         <footer>
-          <p>
-            Franco Matias Cuello | © Argentina Programa 2022. Cordoba, Argentina
-          </p>
+          <p>Franco Matias Cuello | © Argentina 2025. Cordoba, Argentina</p>
         </footer>
       </StyledFooter>
     </PageWrapper>
