@@ -17,7 +17,7 @@ function Nav() {
       {menuOpen && (
         <Menu>
           <MenuItem href="/">Home</MenuItem>
-          <MenuItem href="/formacion">Formacion</MenuItem>
+          <MenuItem href="/formacion">Proyectos</MenuItem>
           <MenuItem href="/skills">Skills</MenuItem>
           <MenuItem href="/contact">Contacto</MenuItem>
         </Menu>
@@ -53,9 +53,9 @@ const Menu = styled.div`
   position: absolute;
   top: 60px;
   right: 0;
-  background: white;
+
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
+
   padding: 10px;
   z-index: 100;
 `;
@@ -63,12 +63,12 @@ const Menu = styled.div`
 const MenuItem = styled.a`
   display: block;
   padding: 10px 20px;
-  color: black;
+  color: white;
   text-decoration: none;
   border-radius: 5px;
 
   &:hover {
-    background-color: #f0f0f0;
+    background-color: rgb(82, 80, 80);
   }
 `;
 

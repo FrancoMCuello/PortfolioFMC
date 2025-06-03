@@ -4,17 +4,20 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Contact from "./components/Contacto";
 import Formacion from "./components/Formacion";
 import Skills from "./components/Skills";
+import { AnimatePresence } from "framer-motion";
 
 function App() {
   return (
     <div>
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/formacion" element={<Formacion />} />
-          <Route path="/skills" element={<Skills />} />
-        </Routes>
+        <AnimatePresence mode="wait">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/formacion" element={<Formacion />} />
+            <Route path="/skills" element={<Skills />} />
+          </Routes>
+        </AnimatePresence>
       </BrowserRouter>
     </div>
   );

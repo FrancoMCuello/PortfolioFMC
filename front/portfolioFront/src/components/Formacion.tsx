@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import BtnArrow from "./BtnArrow";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIosNewOutlined";
 import Nav from "./Nav";
-
+import PageWrapper from "./PageWrapper";
 function Formacion() {
   const navigate = useNavigate();
 
@@ -16,7 +16,7 @@ function Formacion() {
   };
 
   return (
-    <>
+    <PageWrapper>
       <StyledUp>
         <h1
           style={{
@@ -27,7 +27,7 @@ function Formacion() {
             height: "100%",
           }}
         >
-          Formacion dev
+          Desarrollos dev
         </h1>
         <Nav />
       </StyledUp>
@@ -39,11 +39,7 @@ function Formacion() {
 
         <StyledContainerF>
           <div className="containerF">
-            <img
-              className="logoCaC"
-              src="https://elyrod85.github.io/Codo-a-Codo-Proyectos/imgs/logoCACsinbloque.png"
-              alt=""
-            />
+            <img className="logoCaC" src="" alt="Imagen de Proyecto" />
             <h3 className="activateF">
               Aca se agregaria la informacion extendida
             </h3>
@@ -58,10 +54,7 @@ function Formacion() {
             </h3>
           </div>
           <div className="containerF">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-a2b3iLw0VXbLlgYm6wUcaZ07SMFvddObwR1o9fo37IKyFHufGTSoWHTkJztXTfTf0jk&usqp=CAU"
-              alt=""
-            />
+            <img src="imagen del proyecto" alt="" />
             <h3 className="activateF">
               Aca se agregaria la informacion extendida
             </h3>
@@ -79,7 +72,7 @@ function Formacion() {
           />
         </StyledBotonB>
       </StyledContainerG>
-    </>
+    </PageWrapper>
   );
 }
 
@@ -106,7 +99,7 @@ const StyledContainerF = styled.div`
   display: flex;
   flex-direction: row;
   width: 80%;
-  min-height: 80vh;
+  max-height: 80vh;
   justify-content: center;
   align-items: flex-start;
   gap: 1em;

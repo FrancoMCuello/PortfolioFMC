@@ -7,6 +7,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import { useNavigate } from "react-router-dom";
 import BtnArrow from "./BtnArrow";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIosNewOutlined";
+import PageWrapper from "./PageWrapper";
 
 function Home() {
   const navigate = useNavigate();
@@ -20,45 +21,51 @@ function Home() {
 
   return (
     <>
-      <StyledUp>
-        <Nav />
-      </StyledUp>
-      <StyledContainerG>
-        <StyledBotonesRedes className="botonesRedes">
-          <IconButton className="botonGit" onClick={navGit} aria-label="GitHub">
-            <GitHubIcon />
-          </IconButton>
-          <IconButton className="botonGit" aria-label="linkedIn">
-            <LinkedInIcon />
-          </IconButton>
-          <IconButton className="botonGit" aria-label="Instagram">
-            <InstagramIcon />
-          </IconButton>
-        </StyledBotonesRedes>
+      <PageWrapper>
+        <StyledUp>
+          <Nav />
+        </StyledUp>
+        <StyledContainerG>
+          <StyledBotonesRedes className="botonesRedes">
+            <IconButton
+              className="botonGit"
+              onClick={navGit}
+              aria-label="GitHub"
+            >
+              <GitHubIcon />
+            </IconButton>
+            <IconButton className="botonGit" aria-label="linkedIn">
+              <LinkedInIcon />
+            </IconButton>
+            <IconButton className="botonGit" aria-label="Instagram">
+              <InstagramIcon />
+            </IconButton>
+          </StyledBotonesRedes>
 
-        <StyledTitulo>
-          <h1>Hola, mi nombre es Franco M. Cuello</h1>
-          <h2>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas dicta
-            quibusdam, alias, ab nulla nobis quae tenetur repellendus soluta,
-            harum adipisci animi quasi laudantium obcaecati sit veritatis ea
-            consequuntur quam.
-          </h2>
-        </StyledTitulo>
-        <StyledBotonTraslado>
-          <BtnArrow
-            onClick={navFormacion}
-            icon={
-              <ArrowBackIosIcon
-                sx={{
-                  fontSize: 60,
-                  transform: "rotate(180deg)",
-                }}
-              />
-            }
-          />
-        </StyledBotonTraslado>
-      </StyledContainerG>
+          <StyledTitulo>
+            <h1>Hola, Somos ...</h1>
+            <h2>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
+              dicta quibusdam, alias, ab nulla nobis quae tenetur repellendus
+              soluta, harum adipisci animi quasi laudantium obcaecati sit
+              veritatis ea consequuntur quam.
+            </h2>
+          </StyledTitulo>
+          <StyledBotonTraslado>
+            <BtnArrow
+              onClick={navFormacion}
+              icon={
+                <ArrowBackIosIcon
+                  sx={{
+                    fontSize: 60,
+                    transform: "rotate(180deg)",
+                  }}
+                />
+              }
+            />
+          </StyledBotonTraslado>
+        </StyledContainerG>
+      </PageWrapper>
     </>
   );
 }

@@ -4,6 +4,7 @@ import Nav from "./Nav";
 import styled from "styled-components";
 import { TextField, Button, Box, Typography } from "@mui/material";
 import { useState } from "react";
+import PageWrapper from "./PageWrapper";
 function Contact() {
   const navigate = useNavigate();
 
@@ -37,7 +38,7 @@ function Contact() {
   };
 
   return (
-    <>
+    <PageWrapper>
       <StyledUp>
         <Nav />
       </StyledUp>
@@ -51,7 +52,7 @@ function Contact() {
             component="form"
             onSubmit={handleSubmit}
             sx={{
-              maxWidth: 500,
+              width: "50%",
               margin: "0 auto",
               display: "flex",
               flexDirection: "column",
@@ -64,14 +65,14 @@ function Contact() {
             <Typography variant="h5" align="center" color="white">
               Contactanos
             </Typography>
-            <TextField
+            <DarkTextField
               label="Nombre"
               name="nombre"
               value={formData.nombre}
               onChange={handleChange}
               required
             />
-            <TextField
+            <DarkTextField
               label="Email"
               name="email"
               type="email"
@@ -79,7 +80,7 @@ function Contact() {
               onChange={handleChange}
               required
             />
-            <TextField
+            <DarkTextField
               label="Mensaje"
               name="mensaje"
               multiline
@@ -88,17 +89,21 @@ function Contact() {
               onChange={handleChange}
               required
             />
-            <Button variant="contained" type="submit">
+            <DarkButton variant="outlined" type="submit">
               Enviar
-            </Button>
+            </DarkButton>
           </Box>
         </StyledContainerF>
+        <StyledBotonN></StyledBotonN>
       </StyledContainerG>
-      <footer>
-        <p>Franco Matias Cuello | © Argentina Programa 2022</p>
-        <p>Cordoba, Argentina</p>
-      </footer>
-    </>
+      <StyledFooter>
+        <footer>
+          <p>
+            Franco Matias Cuello | © Argentina Programa 2022. Cordoba, Argentina
+          </p>
+        </footer>
+      </StyledFooter>
+    </PageWrapper>
   );
 }
 
@@ -132,6 +137,49 @@ const StyledBotonN = styled.div`
   display: flex;
   width: 10%;
   align-items: center;
+`;
+
+const StyledFooter = styled.div`
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  max-height: 6vh;
+`;
+
+const DarkTextField = styled(TextField)`
+  && {
+    label {
+      color: white;
+    }
+    input,
+    textarea {
+      color: white;
+    }
+    .MuiOutlinedInput-root {
+      fieldset {
+        border-color: white;
+      }
+      &:hover fieldset {
+        border-color: rgb(75, 77, 75);
+      }
+      &.Mui-focused fieldset {
+        border-color: rgb(74, 82, 75);
+      }
+    }
+  }
+`;
+const DarkButton = styled(Button)`
+  && {
+    color: white;
+    border: 2px solid white;
+    &:hover {
+      background-color: #d3d3d3; /* gris claro */
+      color: black;
+      border: 2px solid #d3d3d3;
+    }
+  }
 `;
 
 export default Contact;

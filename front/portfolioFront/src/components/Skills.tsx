@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import BtnArrow from "./BtnArrow";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIosNewOutlined";
 import Nav from "./Nav";
+import PageWrapper from "./PageWrapper";
 
 function Skills() {
   const navigate = useNavigate();
@@ -16,7 +17,7 @@ function Skills() {
   };
 
   return (
-    <>
+    <PageWrapper>
       <StyledUp>
         <h1
           style={{
@@ -79,7 +80,7 @@ function Skills() {
           />
         </StyledBotonB>
       </StyledContainerG>
-    </>
+    </PageWrapper>
   );
 }
 
@@ -99,12 +100,13 @@ const StyledContainerG = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
+  min-height: 80vh;
 `;
 
 const StyledContainerSkills = styled.div`
   display: flex;
   width: 90%;
-  min-height: 80vh;
+  max-height: 80vh;
   padding: 0.5em;
   color: white;
   justify-content: center;
